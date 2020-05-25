@@ -14,34 +14,76 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
+          child: Column(
             children: <Widget>[
-              Container(
-                color: Colors.red,
-                width: 100.0,
-                height: double.infinity,
+              Center(
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/bodhi.jpeg'),
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.yellow,
-                    margin: EdgeInsets.only(left: 55, right: 55),
-                    width: 100,
-                    height: 100,
-                  ),
-                  Container(
-                    color: Colors.green,
-                    margin: EdgeInsets.only(left: 55, right: 55),
-                    width: 100,
-                    height: 100,
-                  ),
-                ],
+              Text(
+                "Bodhisha Thomas",
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              Text(
+                'DEVELOPER',
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.5,
+                    color: Colors.teal[100]),
               ),
               Container(
-                color: Colors.blue,
-                width: 100,
-                height: double.infinity,
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '+91-9653782573',
+                      style: TextStyle(
+                          color: Colors.teal,
+                          fontSize: 20,
+                          fontFamily: 'Source Sans Pro'),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'bodhisha@gmail.com',
+                      style: TextStyle(
+                          color: Colors.teal,
+                          fontSize: 20,
+                          fontFamily: 'Source Sans Pro'),
+                    )
+                  ],
+                ),
               ),
             ],
           ),
